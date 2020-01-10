@@ -11,16 +11,16 @@ describe("Blog tests", () => {
 
     const mockHandler = jest.fn()
     const user = {
-      username: "iamkiko",
-      name: "Christos"
+      username: "ashishaof",
+      name: "charlie"
     }
 
     const testBlog = {
-      title: "ela kentro",
-      author: "kiko",
-      url: "www.ela.com",
-      likes: 76,
-      user: [{ username: "iamkiko", name: "Christos" }]
+      title: "pela ono",
+      author: "sonri",
+      url: "www.indiatv.com",
+      likes: 54,
+      user: [{ username: "ashishaof", name: "charlie" }]
     }
 
     component = render(
@@ -37,8 +37,8 @@ describe("Blog tests", () => {
     const basicInfo = component.container.querySelector('.basicInfo')
     const fullInfo = component.container.querySelector('.fullInfo')
 
-    expect(basicInfo).toHaveTextContent('ela kentro')
-    expect(basicInfo).toHaveTextContent('kiko')
+    expect(basicInfo).toHaveTextContent('pela ono')
+    expect(basicInfo).toHaveTextContent('sonri')
     expect(fullInfo).toHaveStyle('display: none')
   })
 
@@ -48,8 +48,8 @@ describe("Blog tests", () => {
 
     fireEvent.click(basicInfo)
 
-    expect(basicInfo).toHaveTextContent("ela kentro")
-    expect(basicInfo).toHaveTextContent("kiko")
+    expect(basicInfo).toHaveTextContent("pela ono")
+    expect(basicInfo).toHaveTextContent("sonri")
 
     expect(fullInfo).not.toHaveStyle("display: none")
   })
