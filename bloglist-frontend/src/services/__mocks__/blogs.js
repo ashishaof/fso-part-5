@@ -1,31 +1,31 @@
 const blogs = [
   {
     title: "testing blogs",
-    author: "mr test",
+    author: " tester",
     url: "www.test.com",
-    likes: 4,
+    likes: 43,
     user: [
       {
         username: "iamkiko",
         name: "Christos",
-        id: "5d7de58a467ea83a046dea6a"
+        id: "3298sdusjkdh4438al"
       }
     ],
-    id: "5d7e09c5773a971164eaf4f5"
+    id: "5djncksvoe73oifbneus"
   },
   {
     title: "Test number 2",
     author: "mrs test",
     url: "www.testagain.com",
-    likes: 14,
+    likes: 45,
     user: [
       {
-        username: "MR TEST",
+        username: " TESTER",
         name: "TEST",
-        id: "2342"
+        id: "89374"
       }
     ],
-    id: "323sd3"
+    id: "8749s63"
   }
 ]
 
