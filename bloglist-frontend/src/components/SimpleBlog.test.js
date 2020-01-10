@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-// import { prettyDOM } from '@testing-library/dom'
+
 import SimpleBlog from './SimpleBlog'
 
 describe('Simpleblog tests', () => {
@@ -9,8 +9,8 @@ describe('Simpleblog tests', () => {
 
     const blog = {
       title: 'testing react frontend',
-      author: 'Christos',
-      likes: 12
+      author: 'Mahrin',
+      likes: 67
     }
     const component = render(
       <SimpleBlog blog={blog} />
@@ -18,17 +18,17 @@ describe('Simpleblog tests', () => {
 
     const blogInfo = component.container.querySelector('.blogInfo')
     expect(blogInfo).toHaveTextContent('testing react frontend')
-    expect(blogInfo).toHaveTextContent('Christos')
+    expect(blogInfo).toHaveTextContent('Mahrin')
 
     const likes = component.container.querySelector('.likes')
-    expect(likes).toHaveTextContent(12)
+    expect(likes).toHaveTextContent(67)
   })
 
   test('clicking the like button calls event handler twice', () => {
     const blog = {
       title: 'testing react frontend',
-      author: 'Christos',
-      likes: 12
+      author: 'Mahrin',
+      likes: 67
     }
 
     const mockHandler = jest.fn()
