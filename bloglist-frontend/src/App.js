@@ -14,7 +14,7 @@ import "./index.css"
 
 const App = () => {
   const [blogs, setBlogs] = useState([])
-  // const [newBlog, setNewBlog] = useState("")
+
   const [errorMessage, setErrorMessage] = useState(null)
   const [successMessage, setSuccessMessage] = useState(null)
   const [user, setUser] = useState(null)
@@ -24,14 +24,14 @@ const App = () => {
   const author = useField("text")
   const url = useField("text")
 
-  //init blogs on page with useEffect - update to async/await?
+
   useEffect(() => {
     blogService
       .getAll()
       .then(initialBlogs => setBlogs(initialBlogs))
   }, [])
 
-  //   add useEffect for local storage
+
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem("loggedBlogUser")
     if (loggedUserJSON){
@@ -41,7 +41,7 @@ const App = () => {
     }
   }, [])
 
-  //add handleLogin to send form
+
   const handleLogin = async (event) => {
     event.preventDefault()
 
@@ -62,13 +62,12 @@ const App = () => {
       successContent(`Welcome back ${user.name}!`)
     } catch(exception) {
       errorContent("Wrong username or password")
-      //   setTimeout(() => {
-      //     setErrorMessage(null)
-      //   }, 5000)
+    
+      
     }
   }
 
-  //logout functionality
+ 
   const handleLogout = async (event) => {
     window.localStorage.clear()
     blogService.setToken(null)
@@ -76,7 +75,7 @@ const App = () => {
   }
 
 
-  //like button functionality
+
   const addLike = async (id) => {
     const blog = blogs.find(b => b.id === id)
     const updatedBlog = { ...blog, likes: blog.likes + 1 }
@@ -89,7 +88,7 @@ const App = () => {
     }  
   }
 
-  //updating the bloglist to render once blog has been deleted
+
   const bloglistAfterDelete = (id) => {
     const latestBlogs = blogs.filter(b => b.id !== id)
     setBlogs(latestBlogs)
@@ -118,7 +117,7 @@ const App = () => {
     </Togglable>
   )
 
-  const addBlog = async (event) => { //need to update to async/await
+  const addBlog = async (event) => { 
     event.preventDefault()
     blogFormRef.current.toggleVisibility()
 
