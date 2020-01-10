@@ -6,9 +6,9 @@ const blogs = [
     likes: 43,
     user: [
       {
-        username: "iamkiko",
-        name: "Christos",
-        id: "3298sdusjkdh4438al"
+        username: "ashishaof",
+        name: "Charlie",
+        id: "293kjHek2975"
       }
     ],
     id: "5djncksvoe73oifbneus"
