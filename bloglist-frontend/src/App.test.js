@@ -26,9 +26,9 @@ describe("<App />", () => {
 
   test("blogs appear when user is logged in", async () => {
     const user = {
-      username: "MR TEST",
+      username: " TESTER",
       name: "TEST",
-      token: 1231231214
+      token: 234566725
     }
 
     localStorage.setItem("loggedBlogUser", JSON.stringify(user))
